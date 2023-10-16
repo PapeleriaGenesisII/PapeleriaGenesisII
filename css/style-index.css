@@ -1,0 +1,239 @@
+
+/* ---------------------- HEADER ---------------------- */
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.encabezado{
+    background-image: url(../imagenes/papeleriaFondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-height: 600px;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado .opacarImg{
+    position: absolute;
+    background-color: #AA5315;
+    width: 100%;
+    max-height: 600px;
+    height: 500px;
+    top: 0;
+    opacity: 0.6;
+}
+
+.container-contacto{
+    position: relative;
+    height: 50px;
+    text-align: right;
+    padding: 50px 220px 0 0;
+}
+
+.container-contacto .contacto-title{
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.container-nombre {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 100px 0 50px 0;
+}
+
+.container-nombre h2 {
+    width:fit-content;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border: solid #E8E8E8 2px;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+/* ---------------------- BARRA DE NAVEGACION ---------------------- */
+
+.nav-inicio{
+    background-color: rgb(94, 94, 94);
+}
+
+.navDesple-inicio {
+    box-shadow: 0px 0px 6px 2px rgb(100, 100, 100);
+    padding-left: 15px;
+    margin-right: 10px;
+}
+
+/* ---------------------- SECCION ¿QUE OFRECEMOS? ---------------------- */
+
+.container-oferta{
+    padding: 10px;
+    margin: auto;
+}
+
+.tarjetas{
+    display: grid;
+    grid-template-columns: repeat(3, 235px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjetas div{
+    background-color: gray;
+    height: 304px;
+    /*border: 2px solid rgb(152, 152, 152);*/
+    box-shadow: 0.3px 0.3px 7px gray;
+}
+
+.tarjetas div img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ---------------------- SECCION UBICACION ---------------------- */
+
+.section-ubicacion{
+    background-color: #F5F5F5;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.container-ubicacion .container-divs {
+    position: relative;
+    z-index: 1;
+}
+
+.container-ubicacion div iframe{
+    width: 100%;
+}
+
+
+.bloquear-mapa {
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.575);
+    width: 100%;
+    height: 450px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    cursor: pointer;
+}
+
+.bloquear-mapa h4 {
+    color: white;
+}
+
+.opcionDesbloqueo {
+    position: absolute;
+    background-color: rgba(48, 48, 48, 0.747);
+    height: 40px;
+    width: 145px;
+    padding: 5px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: 460px;
+    cursor: pointer;
+}
+
+.opcionDesbloqueo h4 {
+    color: rgb(235, 235, 235);
+    font-size: 0.8rem;
+}
+
+
+/* ---------------------- SECCION MEDIA QUERIES ---------------------- */
+
+@media screen and (max-width: 1024px){
+
+    /* ---------------------- HEADER ---------------------- */
+
+    .container-contacto .contacto-title{
+        font-size: 1rem;
+    }
+
+    .container-nombre h2 {
+        font-size: 1.8rem;
+    }
+
+    /* ---------------------- SECCION ¿QUE OFRECEMOS? ---------------------- */
+
+    
+}
+
+@media screen and (max-width: 750px){
+
+    .encabezado,
+    .opacarImg {
+        height: 450px;
+    }
+
+    .container-contacto{
+        padding: 50px 0 0 0;
+        text-align: center;
+    }
+
+    .container-contacto .contacto-title{
+        font-size: 1rem;
+    }
+
+    .container-nombre h2 {
+        font-size: 1.7rem;
+    }
+
+    /* ---------------------- SECCION ¿QUE OFRECEMOS? ---------------------- */
+
+    .tarjetas{
+        grid-template-columns: repeat(2, 235px);
+    }
+
+    .tarjetas div{
+        height: 304px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .container-contacto .contacto-title{
+        font-size: 0.9rem;
+    }
+
+    .container-nombre h2 {
+        font-size: 1.6rem;
+    }
+
+    /* ---------------------- SECCION ¿QUE OFRECEMOS? ---------------------- */
+
+    .tarjetas{
+        grid-template-columns: repeat(1, 235px);
+    }
+
+    .tarjetas div{
+        height: 304px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .opcionDesbloqueo {
+        height: 30px;
+        width: 120px;
+    }
+
+    .opcionDesbloqueo h4 {
+        font-size: 0.65rem;
+    }
+}

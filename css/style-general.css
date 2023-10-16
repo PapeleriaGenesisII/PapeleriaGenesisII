@@ -1,0 +1,480 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif, Arial;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif, Arial;
+    font-size: 16px;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* ---------------------- BARRA DE NAVEGACION ---------------------- */
+
+.menu{
+    position: relative;
+    height: 55px;
+    background-color: #424242;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+.menu ul li:not(.logoPapeleria){
+    padding: 14px;
+}
+
+.nav-inicio,
+.nav-servicios{
+    border-right: solid rgb(148, 148, 148) 2px;
+}
+
+.nav-papeleria,
+.nav-mas{
+    border-left: solid rgb(148, 148, 148) 2px;
+}
+
+.logoPapeleria img{
+    width: 280px;
+    height: 60px;
+    margin: -30px 5px 0 5px;
+    border: rgba(255, 255, 255, 0.603) solid 4px;
+}
+
+
+/* ---------------------- BARRA DE NAVEGACION MOBILE ---------------------- */
+
+.menuDesplegable,
+.contenedor-menu-desplegable {
+    display: none;
+}
+
+.menuDesplegable{
+    position: relative;
+    height: 50px;
+    background-color: #424242;
+}
+
+.barras-abrir-menu {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.contenedor-logo-menu{
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 6px;
+}
+
+.contenedor-logo-papeleria {
+    width: 100%;
+    text-align: center;
+}
+
+.barras-abrir-menu ul {
+    list-style: none;
+}
+
+.barras-abrir-menu img {
+    width: 40px;
+    text-align: left;
+}
+
+.ocultar-logo-menu{
+    visibility: hidden;
+}
+
+
+/* -------------------- CONTENEDOR MENU DESPLEGADO -------------------- */
+
+.contenedor-menu-desplegable {
+    background-color: rgba(143, 143, 143, 0.89);
+    position: absolute;
+    width: 70%;
+    top: 0;
+    height: 500px;
+    border-top: 1px solid rgb(160, 160, 160);
+    border-bottom: 1px solid rgb(160, 160, 160);
+    border-right: 1px solid rgb(160, 160, 160);
+    box-shadow: 2px 2px 4px 1px gray;
+    z-index: 1;
+}
+
+.contenedor-menu-desplegable ul {
+    padding-left: 10px;
+    list-style: none;
+}
+
+.contenedor-menu-desplegable li:first-of-type {
+    padding: 0 0 30px 0;
+    list-style-type: none;
+    margin-left: -50px;
+}
+
+.contenedor-menu-desplegable li {
+    font-size: 1.3rem;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    list-style: none;
+}
+
+.logoPapeleria {
+    text-align: center;
+}
+
+.contenedor-menu-desplegable hr {
+    position: absolute;
+    top: 50px;
+    background-color: rgb(194, 194, 194);
+    border: none;
+    height: 2px;
+    width: 100%;
+    box-shadow: 1px 3px 4px 1px rgb(73, 73, 73);
+}
+
+@keyframes mover-menu-desplegable {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes cerrar-menu-desplegado {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+.salir-menu-desplegado {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+.salir-menu-desplegado:active {
+    transform: scale(0.5);
+    transition: all ease 100ms;
+}
+
+
+/* --------------- SPAN PARA DIRECCIONAR A MENU DESPLEGABLE --------------- */
+
+#direccionar-a-menu {
+    position: absolute;
+    top: -40px;
+}
+
+
+/* ------------------ MENU DESPLEGABLE DE OPCION MÁS ------------------ */
+
+.nav-mas {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-mas img {
+    width: 15px;
+}
+
+
+.menu-mas {
+    background-color: #424242;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+}
+
+#flecha-arriba-menu-mas {
+    display: none;
+}
+
+#dirigir-a-menu-mas {
+    position: absolute;
+    top: -40px;
+}
+
+/* ---------------- MENU MOBILE DESPLEGABLE DE OPCION MÁS ---------------- */
+
+.navDesple-mas{
+    padding-right: 20px;
+}
+
+.menu-mobile-mas{
+    width: 100%;
+    background-color: rgba(143, 143, 143, 0.747);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: fit-content;
+}
+
+.navDesple-tecnologia{
+    margin-left: 0 !important;
+    padding: 5px !important;
+}
+
+/* -------------------- SECCION BASE DE DISEÑO TITULOS -------------------- */
+
+.titulos{
+    position: relative;
+    z-index: 0;
+    margin: 30px auto;
+    text-align: center;
+    height: 56px;
+    border-top: #BBBBBB solid 2px;
+    border-bottom: #BBBBBB solid 2px;
+}
+
+.titulos h3 {
+    padding-top: 15px;
+}
+
+/* ---------------------- SECCION FOOTER ---------------------- */
+
+footer{
+    background-color: #393939;
+}
+
+footer p{
+    margin: 0;
+}
+
+.container-footer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.container-atencion{
+    width: 50%;
+    text-align: center;
+    /*padding-left: 50px;*/
+}
+
+.container-papeleria{
+    width: 50%;
+    text-align: center;
+}
+
+.container-horas {
+    font-weight: lighter;
+    padding: 0 20px;
+    width: 250px;
+    margin: auto;
+}
+
+.container-horas ul {
+    padding: 0 25px 25px 0;
+    margin: 0;
+    text-align: left;
+}
+
+.container-titulo-footer h4{
+    margin-top: 30px;
+}
+
+.container-footer-info{
+    text-align: left;
+    font-weight: lighter;
+}
+
+.container-footer-info a{
+    text-decoration: underline;
+}
+
+/* ---------------------- SECCION COPYRIGHT ---------------------- */
+
+.copyright{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* ---------------------- SECCION MEDIA SCREEN ---------------------- */
+
+@media screen and (max-width: 1024px) {
+    
+    /* ---------------------- BARRA DE NAVEGACION ---------------------- */
+
+    .menu ul{
+        font-size: 1rem;
+    }
+
+    .logoPapeleria img{
+        width: 262px;
+        height: 57px;
+    }
+
+    /* ---------------------- SECCION FOOTER ---------------------- */
+
+    .container-footer{
+        font-size: 0.9rem;
+    }
+
+    /* ---------------------- SECCION COPYRIGHT ---------------------- */
+
+    .copyright{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .menu {
+        display: none;
+    }
+
+    .menuDesplegable {
+        display: block;
+    }
+
+    /* -------------------- BARRA DE NAVEGACION MOBILE -------------------- */
+    
+    .logoPapeleria img{
+        width: 270px;
+        height: 60px;
+        margin: -30px 5px 0 5px;
+        border: rgba(255, 255, 255, 0.603) solid 4px;
+    }
+    
+    /* ---------------------- SECCION FOOTER ---------------------- */
+
+    .container-footer{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-atencion{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container-papeleria{
+        width: 100%;
+    }
+
+    .container-footer-info {
+        padding: 0 15px;
+    }
+
+}
+
+@media screen and (max-width: 520px){
+
+    .contenedor-menu-desplegable {
+        width: 80%;
+    }
+
+    .logoPapeleria img{
+        width: 270px;
+        height: 60px;
+    }
+
+    .salir-menu-desplegado {
+        top: 1px;
+        right: 1px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .contenedor-menu-desplegable li {
+        font-size: 1.1rem;
+    }
+
+    .contenedor-logo-menu {
+        padding-left: 10px;
+    }
+
+    .logoPapeleria img {
+        width: 250px;
+    }
+
+    .quitar-logo-escondido {
+        padding: 0;
+    }
+
+    .quitar-logo-escondido img {
+        width: 10px;
+    }
+
+    .copyright{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .contenedor-menu-desplegable ul {
+        padding-left: 10px;
+    }
+    
+    .contenedor-menu-desplegable li:first-of-type {
+        padding: 0 0 15px 0;
+        margin-left: -40px;
+    }
+
+    .logoPapeleria {
+        text-align: center;
+    }
+
+    .logoPapeleria img {
+        width: 210px;
+        height: 50px;
+        margin: -30px 5px 0 5px;
+    }
+
+    .contenedor-menu-desplegable hr {
+        top: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .logoPapeleria {
+        text-align: left;
+    }
+
+    .quitar-logo-escondido {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 349px) {
+
+    .contenedor-logo-menu {
+        padding-left: 5px;
+    }
+
+    .logoPapeleria a{
+        padding-left: 30px;
+    }
+}
